@@ -5,7 +5,6 @@ import { College } from "./door";
 function First()
 {
     return(<><h3>I have completed bachelor of computer application</h3></>)
-    
 }
 
  export const Firstone=()=>
