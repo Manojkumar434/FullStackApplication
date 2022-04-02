@@ -1,72 +1,75 @@
 package backend.poc.first.POC1BackEnd;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.Arrays;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Entity
 public class Resource 
 {
+	@javax.persistence.Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int Id;
-	private String fname;
-	private int young;
-	private float sal;
-	private String city1;
-	private List<String> yes=new ArrayList<String>();
-	
-	//ToString
+	private String proFname;
+	private int proYoung;
+	private float proSal;
+	private String proCity1;
+	private String[] proYes;
 	@Override
 	public String toString() {
-		return "Resource [Id=" + Id + ", fname=" + fname + ", young=" + young + ", sal=" + sal + ", city1=" + city1
-				+ ", yes=" + yes + "]";
+		return "Resource [Id=" + Id + ", proFname=" + proFname + ", proYoung=" + proYoung + ", proSal=" + proSal
+				+ ", proCity1=" + proCity1 + ", proYes=" + Arrays.toString(proYes) + "]";
 	}
-	
-	//Constructor
-	public Resource(String fname, int young, float sal, String city1, List<String> yes) {
+	public Resource() {
 		super();
-		this.fname = fname;
-		this.young = young;
-		this.sal = sal;
-		this.city1 = city1;
-		this.yes = yes;
+		// TODO Auto-generated constructor stub
 	}
-	
-	//getter setter method-Encapsulation
+	public Resource(String proFname, int proYoung, float proSal, String proCity1, String[] proYes) {
+		super();
+		this.proFname = proFname;
+		this.proYoung = proYoung;
+		this.proSal = proSal;
+		this.proCity1 = proCity1;
+		this.proYes = proYes;
+	}
 	public int getId() {
 		return Id;
 	}
 	public void setId(int id) {
 		Id = id;
 	}
-	public String getFname() {
-		return fname;
+	public String getProFname() {
+		return proFname;
 	}
-	public void setFname(String fname) {
-		this.fname = fname;
+	public void setProFname(String proFname) {
+		this.proFname = proFname;
 	}
-	public int getYoung() {
-		return young;
+	public int getProYoung() {
+		return proYoung;
 	}
-	public void setYoung(int young) {
-		this.young = young;
+	public void setProYoung(int proYoung) {
+		this.proYoung = proYoung;
 	}
-	public float getSal() {
-		return sal;
+	public float getProSal() {
+		return proSal;
 	}
-	public void setSal(float sal) {
-		this.sal = sal;
+	public void setProSal(float proSal) {
+		this.proSal = proSal;
 	}
-	public String getCity1() {
-		return city1;
+	public String getProCity1() {
+		return proCity1;
 	}
-	public void setCity1(String city1) {
-		this.city1 = city1;
+	public void setProCity1(String proCity1) {
+		this.proCity1 = proCity1;
 	}
-	public List<String> getYes() {
-		return yes;
+	public String[] getProYes() {
+		return proYes;
 	}
-	public void setYes(List<String> yes) {
-		this.yes = yes;
+	public void setProYes(String[] proYes) {
+		this.proYes = proYes;
 	}
+	
+	
 }
