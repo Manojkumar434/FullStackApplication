@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import { create } from "./Yash";
+import { join } from "./AxiosConnect";
 
 export const Hapiee=()=>
 {
@@ -34,10 +34,12 @@ export const Hapiee=()=>
                 )
 
             }
-    const abc=()=>
+    const abc=async()=>
     {
         // alert("Enrolled Successfully "+JSON.stringify(sign))
-        create(sign)
+        // create(sign)
+        const yets=await join(sign)
+        alert(yets.data)
     }
     const bca=()=>
     {

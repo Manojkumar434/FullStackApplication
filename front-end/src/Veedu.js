@@ -6,7 +6,7 @@ import { fetchExact, list } from "./Yash";
 import { Padi } from "./Read";
 import {  Update } from "./Update";
 
-export const Veedu=()=>
+export const Views=()=>
 {
     const[tmpArray,settmpArray]=useState([])
     const[tempArray,settempArray]=useState(false)
